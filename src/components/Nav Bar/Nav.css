@@ -1,0 +1,148 @@
+.wrapper-glob{
+	contain: paint;
+}
+.nav-container {
+	width: 100vw;
+	top: 0;
+	position: sticky;
+	contain: paint;
+	background: var(--page-bg);
+	z-index: 10;
+	transition: 0.3s ease-in-out;
+}
+
+.nav-content {
+	max-width: 1270px;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 35px;
+	margin: 0 auto;
+	user-select: none;
+}
+.content-ul,
+.content-menu,
+.content-logo-name,
+.menu-lg {
+	display: flex;
+	align-items: center;
+	color: var(--nav-text);
+	
+}
+
+.content-links {
+	display: flex;
+}
+.content-links a:hover{
+	color: var(--purple);
+}
+
+.content-links a {
+	margin-left: 2rem;
+}
+.content-ul{
+justify-content: center;
+}
+.content-ul li a:hover,
+.menu-lg:hover {
+	cursor: pointer;
+}
+
+.content-logo-name img {
+	width: 60px;
+	border-radius: 2rem;
+}
+
+.content-logo-name h3 {
+	padding-left: 2rem;
+}
+
+.modes-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--white-text);
+	background-color: var(--span);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.content-menu{
+	margin-right: .5rem;
+}
+.content-menu a {
+	color: var(--nav-text);
+}
+
+.menu-lg img {
+	margin-left: .5rem;
+	width: 1.5rem;
+}
+
+.burger-btn {
+	display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.content-menu.active {
+		margin-right: 20px;
+		transition: 0.3s ease-in-out;
+	}
+
+	.burger-btn {
+		display: flex;
+		cursor: pointer;
+		width: 45px;
+		color: var(--purple);
+		z-index: 10;
+	}
+
+	.content-menu {
+		position: absolute;
+		display: flex;
+		flex-direction: row-reverse;
+		right: 0;
+		width: 100vw;
+		height: 80px;
+		background: var(--page-bg);
+		margin-right: -100%;
+		transition: 0.3s ease-in-out;
+
+	}
+
+	.content-ul {
+		min-width: 70%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.burger-btn {
+			width: 30px;
+	}
+
+	.nav-content {
+		padding: 0 25px;
+	}
+
+	.menu-lg img {
+		width: 1.3rem;
+	}
+
+	.menu-lg p {
+		font-size: 0.9rem;
+	}
+
+	.modes-btn {
+		width: 2rem;
+		height: 2rem;
+	}
+	.content-logo-name h3{
+		padding-left: 1.2rem;
+	}
+}

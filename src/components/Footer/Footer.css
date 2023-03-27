@@ -1,0 +1,275 @@
+footer {
+	background: var(--page-bg);
+	padding: 80px 25px;
+	transition: ease-in-out 0.3s;
+}
+
+.contacts-title::before {
+	content: "";
+	position: absolute;
+	width: 100vw;
+	left: 0;
+	border: 6px solid var(--page-bg2);
+	box-shadow: 0rem 1rem 1rem 0.01rem rgb(0 0 0 / 0.15);
+	transition: ease-in-out 0.3s;
+}
+
+.contacts-container {
+	margin: 0 auto;
+	max-width: 1200px;
+	min-height: 380px;
+	padding: 80px 90px;
+	border: 2px solid var(--hr);
+	border-radius: 1rem;
+}
+
+.contacts-title {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -11rem;
+	margin-bottom: 6rem;
+}
+
+.contacts-title h1 {
+	z-index: 50;
+	width: 241px;
+	height: 72px;
+	background-color: var(--green);
+	text-align: center;
+	border-radius: 1.2rem;
+	box-shadow: 2rem 2rem 3rem rgb(0 0 0 / 0.2);
+	margin-top: -1rem;
+	font-size: 2rem;
+	line-height: 4rem;
+	color: var(--btn-text);
+}
+
+.contacts-icons {
+	display: flex;
+	align-items: center;
+	margin-top: -1.7rem;
+	margin-left: -1.5rem;
+	z-index: 5;
+	color: var(--nav-text);
+}
+
+.icon {
+	margin-left: 1rem;
+	transition: ease-in-out 0.1s;
+}
+
+.icon:hover {
+	transform: translateY(-10px);
+	cursor: pointer;
+}
+.icon:active{
+	transform: scaleY(1);
+}
+
+.contacts-info-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.contacts-items {
+	padding: 0 45px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.2rem;
+	margin-top: 1rem;
+	color: var(--nav-text)
+}
+
+.contacts-items h3 {
+	font-size: 1.5rem;
+	line-height: 3rem;
+	font-family: 'Poppins';
+	font-weight: 400;
+	margin-left: 1rem;
+}
+.contacts-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	min-width: 60%;
+	padding: 0 25px;
+}
+
+.inputs {
+	min-height: 2.2rem;
+	margin-bottom: .7rem;
+	border-radius: .3rem;
+	border: 0px;
+	font-family: 'Poppins';
+	font-weight: 300;
+	padding: 1rem;
+	-webkit-box-shadow: inset -1px -1px 1px rgba(226, 223, 223, 0.25),
+	inset 10px 10px 17px -12px rgba(64, 95, 124, 0.25);
+	outline: none;
+	background-color: var(--page-bg);
+	transition: ease-in-out 0.3s;
+}
+
+.input-message {
+	min-height: 60%;
+	resize: none;
+	outline: none;
+}
+.submit-btn{
+	position: relative;
+	height: 50px;
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+form button {
+	width: 165px;
+	border-radius: .6rem;
+	border: 0px;
+	font-family: 'Poppins';
+	font-weight: 300;
+	font-size: 1rem;
+	padding: .4rem;
+	margin-bottom: 1.5rem;
+	box-shadow:  3px 3px 10px 2px rgba(0, 0, 0, 0.25);
+	background-color: var(--green);
+	color: var(--btn-text);
+	transition: ease 0.1s;
+	cursor: pointer;
+	user-select: none;
+}
+
+form button:active {
+	font-size: .99rem;
+	background-color: rgb(97, 192, 97);
+}
+.up-btn{
+	position: absolute;
+	right: 0;
+}
+.up-btn a{
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: var(--p);
+	display: flex;
+	width: 100px;
+	height: 50px;
+	border-radius: .8rem;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--orange);
+	box-shadow: 0px 0px 20px 3px rgba(171, 142, 204, 0.55);
+	transition: ease-in-out 0.2s;
+	animation: up .6s ease-in-out infinite;
+	cursor: pointer;
+	user-select: none;
+}
+@keyframes up {
+	0%{margin-top: 8rem;}
+	50%{margin-top: 7rem;}
+	100%{margin-top: 8rem;}
+}
+
+@media screen and (max-width: 998px) {
+	.contacts-container {
+		padding: 80px 0;
+	}
+
+	.contacts-info-wrapper {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contacts-info {
+		margin-bottom: 1rem;
+	}
+
+	.contacts-items {
+		margin-bottom: 1.2rem;
+		font-size: 1.5rem;
+		line-height: 3rem;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		min-width: 80%;
+	}
+
+	.input-message {
+		min-height: 200px;
+	}
+	.up-btn a{
+		width: 80px;
+		height: 50px;
+		border-radius: 1.3rem;
+		margin-right: 0rem;
+		margin-bottom: 5rem;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	footer {
+		padding: 25px 25px;
+	}
+
+	.contacts-container {
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.contacts-items h3 {
+		font-size: 1rem;
+		line-height: 2rem;
+	}
+
+	form button:active {
+		padding: .4rem;
+		box-shadow: 3px 3px 21px -15px rgba(0, 0, 0, 0.25);
+	}
+	.contacts-icons{
+		margin-top: -.2rem;
+	}
+
+	.contacts-title {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0rem;
+		margin-top: -2rem;
+	}
+
+	.contacts-title h1 {
+		z-index: 5;
+		width: 195px;
+		height: 58px;
+		font-size: 1.2rem;
+		line-height: 3.4rem;
+		margin-bottom: 2rem;
+	}
+
+	.contacts-info {
+		margin-top: 1.5rem;
+		padding: 0 40px;
+	}
+	form {
+		width: 100%;
+	}
+	.up-btn a{
+		width: 50px;
+		height: 50px;
+		border-radius: 2rem;
+		margin-right: -1rem;
+		margin-bottom: 7.5rem;
+	}
+
+}

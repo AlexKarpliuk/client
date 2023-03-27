@@ -1,0 +1,34 @@
+.dop{
+	color: var(--p);
+}
+.ql-toolbar,.ql-snow,.ql-container {
+	border: none !important;
+   outline: none;
+}
+.ql-formats button{
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+.update-btn{
+	font-size: 1.1rem;
+	margin-top: 1rem;
+	width: 130px;
+	border-radius: 7px;
+	transition: .3s;
+}
+.update-btn:hover{
+	filter: brightness(110%);
+}
+input[type=file]::file-selector-button {
+	background-color: #976d6d;
+	color: var(--page-bg);
+	border-radius: 5px;
+	border: 0px;
+	padding: 5px 10px;
+	margin-right: 20px;
+	transition: .3s;
+}
+input[type=file]::file-selector-button:hover {
+	background-color: var(--green);
+ }

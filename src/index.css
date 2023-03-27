@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+a {
+	color: var(--nav-text);
+}
+
+hr {
+	border: 1px solid var(--hr);
+	margin-bottom: 1.5rem;
+}
+
+
+:root [data-theme='light'] {
+	--page-bg: #F9FAFD;
+	--page-bg2: #FFFFFF;
+	--nav-text: #000314;
+	--white-text: #EAEAEA;
+	--p: #4E4B66;
+	--btn-text: #FFFFFF;
+	--span: #7156FF;
+	--green: #7CD85D;
+	--orange: #FFB33F;
+	--purple: #7357FF;
+	--black: #15131F;
+	--hr: rgb(208, 210, 212);
+	--memory: #c9c9c9;
+}
+
+:root [data-theme='dark'] {
+	--page-bg: #211D31;
+	--page-bg2: #1E1A2D;
+	--nav-text: #4E4B66;
+	--white-text: #EAEAEA;
+	--p: #9793B9;
+	--btn-text: #15131F;
+	--span: #7156FF;
+	--green: #7CD85D;
+	--orange: #FFB33F;
+	--purple: #7357FF;
+	--black: #15131F;
+	--hr: rgb(60, 56, 80);
+	--memory: #2f2b44;
+}

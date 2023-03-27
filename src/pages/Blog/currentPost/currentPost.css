@@ -1,0 +1,70 @@
+.blog-container{
+	max-width: 1250px;
+	min-height: 100vh;
+	margin: 80px auto 0 auto;
+	padding: 0 40px;
+}
+.blog-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.blog-info h1{
+	font-family: Poppins;
+	font-size: 3rem;
+	color: var(--p);
+	margin-bottom: 1.5rem;
+	letter-spacing: 5px;
+}
+.author-time{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	letter-spacing: 2px;
+	color: var(--nav-text);
+}
+.author-time time, .author-time p {
+	margin-bottom: .7rem;
+}
+.image-post {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	margin: 2rem 0;
+}
+.image-post img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.summary-content{
+	background-color: var(--page-bg);
+	color: var(--p);
+	line-height: 1.7rem;
+	margin: 1.5rem 0;
+	transition: 0.3s ease-in-out;
+}
+.edit-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+	height: 40px;
+	border-radius: .5rem;
+	background-color: #976d6d;
+	box-shadow: .3rem .2rem 0.7rem 0.1rem rgb(0 0 0 / 0.25);
+	float: right;
+	transition: .3s;
+}
+.edit-btn:hover{
+	background-color: rgb(223, 36, 36);
+}
+.edit-btn:active{
+	filter: brightness(80%);
+}
+.edit-btn h1{
+	color: var(--white-text);
+}
+
