@@ -14,7 +14,7 @@ export default function Reg() {
 
 	async function register(e) {
 		e.preventDefault();
-		const response = await fetch('http://localhost:5000/blog/register', {
+		const response = await fetch('https://server-portfolioalex.vercel.app/blog/register', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username, password }),

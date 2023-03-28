@@ -19,7 +19,7 @@ export default function Posts({ _id, title, content, cover, summary, createdAt, 
 			<div className="post" >
 				<div className="image">
 					<Link to={userInfo ? `post/${_id}` : 'login/'} >
-						<img src={'http://localhost:5000/' + cover} alt="img" />
+						<img src={'https://server-portfolioalex.vercel.app/' + cover} alt="img" />
 					</Link>
 				</div>
 				<div className="info">
