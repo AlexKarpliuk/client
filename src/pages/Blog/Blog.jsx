@@ -15,7 +15,7 @@ function Blog() {
 
 
 	useEffect(() => {
-		fetch('https://server-portfolioalex.vercel.app/blog/profile', {
+		fetch('https://server-fv03.onrender.com/blog/profile', {
 			credentials: 'include'
 		}).then(response => {
 			if (!response.ok) {
@@ -28,7 +28,7 @@ function Blog() {
 			console.error(error)
 		});
 
-		fetch('https://server-portfolioalex.vercel.app/blog/post').then(response => {
+		fetch('https://server-fv03.onrender.com/blog/post').then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			 }
@@ -44,7 +44,7 @@ function Blog() {
 
 
 	function logout() {
-		fetch('https://server-portfolioalex.vercel.app/blog/logout', {
+		fetch('https://server-fv03.onrender.com/blog/logout', {
 			credentials: 'include',
 			method: 'POST'
 		});

@@ -37,7 +37,7 @@ export default function EditPost() {
 
 
 	useEffect(() => {
-		fetch(`https://server-portfolioalex.vercel.app/post/${id}`)
+		fetch(`https://server-fv03.onrender.com/post/${id}`)
 			.then(response => {
 				response.json().then(postInfo => {
 					setTitle(postInfo.title);
@@ -57,7 +57,7 @@ export default function EditPost() {
 		if (files?.[0]) {
 			data.set('file', files?.[0]);
 		}
-		const response = await fetch('https://server-portfolioalex.vercel.app/blog/post', {
+		const response = await fetch('https://server-fv03.onrender.com/blog/post', {
 			method: 'PUT',
 			body: data,
 			credentials: 'include',
@@ -71,7 +71,7 @@ export default function EditPost() {
 		e.preventDefault();
 		const data = new FormData();
 		data.set('id', id);
-		const response = await fetch(`https://server-portfolioalex.vercel.app/blog/edit/${id}`, {
+		const response = await fetch(`https://server-fv03.onrender.com/blog/edit/${id}`, {
 			method: 'DELETE',
 			body: data,
 			credentials: 'include',

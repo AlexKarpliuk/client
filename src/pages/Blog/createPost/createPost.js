@@ -39,7 +39,7 @@ export default function CreatePost() {
 			data.set('file', files?.[0]);
 		}
 
-		const response = await fetch('https://server-portfolioalex.vercel.app/blog/post', {
+		const response = await fetch('https://server-fv03.onrender.com/blog/post', {
 			method: 'POST',
 			body: data,
 			credentials: 'include',
