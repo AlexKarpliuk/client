@@ -15,7 +15,7 @@ export default function CurrentPost() {
 	const { id } = useParams();
 	// console.log(postInfo)
 	useEffect(() => {
-		fetch(`http://server-portfolioalex.vercel.app/post/${id}`).then(response => {
+		fetch(`https://server-portfolioalex.vercel.app/post/${id}`).then(response => {
 			response.json().then(info => {
 				setPostInfo(info);
 			})
@@ -37,7 +37,7 @@ export default function CurrentPost() {
 					</p>
 				</div>
 				<div className="image-post">
-					<img src={`http://server-portfolioalex.vercel.app/${postInfo.cover}`} alt="img" />
+					<img src={`https://server-portfolioalex.vercel.app/${postInfo.cover}`} alt="img" />
 				</div>
 				<div className="summary-content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
 			</div>
