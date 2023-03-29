@@ -18,7 +18,7 @@ export default function LoginForm() {
 
 	async function login(e) {
 		e.preventDefault();
-		const response = await fetch('https://server-portfolioalex.vercel.app/blog/login', {
+		const response = await fetch('http://server-portfolioalex.vercel.app/blog/login', {
 			method: 'POST',
 			body: JSON.stringify({ username, password }),
 			headers: { 'Content-Type': 'application/json' },
