@@ -14,7 +14,7 @@ export default function Reg() {
 
 	async function register(e) {
 		e.preventDefault();
-		const response = await fetch('http://localhost:5000/blog/register', {
+		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/register', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username, password }),

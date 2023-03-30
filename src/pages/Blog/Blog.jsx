@@ -14,7 +14,7 @@ function Blog() {
 	const [posts, setPosts] = useState()
 
 	useEffect(() => {
-		fetch('http://localhost:5000/blog/profile', {
+		fetch(process.env.REACT_APP_BASE_URL+'/blog/profile', {
 			credentials: 'include'
 		}).then(response => {
 			if (!response.ok) {
@@ -27,7 +27,7 @@ function Blog() {
 			console.error(error)
 		});
 
-		fetch('http://localhost:5000/blog/post').then(response => {
+		fetch(process.env.REACT_APP_BASE_URL+'/blog/post').then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			 }
@@ -43,7 +43,7 @@ function Blog() {
 
 
 	function logout() {
-		fetch('http://localhost:5000/blog/logout', {
+		fetch(process.env.REACT_APP_BASE_URL+'/blog/logout', {
 			credentials: 'include',
 			method: 'POST'
 		});
@@ -54,6 +54,7 @@ function Blog() {
 
 	const username = userInfo?.username;
 	const location = useLocation();
+	
 	return (
 		<div className="wrapper">
 			<nav className='blog-nav-wrapper'>

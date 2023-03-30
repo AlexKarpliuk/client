@@ -39,7 +39,7 @@ export default function CreatePost() {
 			data.set('file', files?.[0]);
 		}
 
-		const response = await fetch('http://localhost:5000/blog/post', {
+		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/post', {
 			method: 'POST',
 			body: data,
 			credentials: 'include',

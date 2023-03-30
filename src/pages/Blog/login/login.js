@@ -18,7 +18,7 @@ export default function LoginForm() {
 
 	async function login(e) {
 		e.preventDefault();
-		const response = await fetch('http://localhost:5000/blog/login', {
+		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/login', {
 			method: 'POST',
 			body: JSON.stringify({ username, password }),
 			headers: { 'Content-Type': 'application/json' },

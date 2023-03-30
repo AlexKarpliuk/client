@@ -15,7 +15,7 @@ export default function CurrentPost() {
 	const { id } = useParams();
 	// console.log(postInfo)
 	useEffect(() => {
-		fetch(`http://localhost:5000/post/${id}`).then(response => {
+		fetch(`${process.env.REACT_APP_BASE_URL}/post/${id}`).then(response => {
 			response.json().then(info => {
 				setPostInfo(info);
 			})
@@ -37,7 +37,7 @@ export default function CurrentPost() {
 					</p>
 				</div>
 				<div className="image-post">
-					<img src={`http://localhost:5000/${postInfo.cover}`} alt="img" />
+					<img src={`${process.env.REACT_APP_BASE_URL}/${postInfo.cover}`} alt="img" />
 				</div>
 				<div className="summary-content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
 			</div>
