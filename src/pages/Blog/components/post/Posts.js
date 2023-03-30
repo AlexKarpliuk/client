@@ -19,7 +19,7 @@ export default function Posts({ _id, title, content, cover, summary, createdAt, 
 			<div className="post" >
 				<div className="image">
 					<Link to={userInfo ? `post/${_id}` : 'login/'} >
-						<img src={'https://server-fv03.onrender.com/' + cover} alt="img" />
+						<img src={'http://localhost:5000/' + cover} alt="img" />
 					</Link>
 				</div>
 				<div className="info">
@@ -27,7 +27,7 @@ export default function Posts({ _id, title, content, cover, summary, createdAt, 
 						<h2>{title}</h2>
 					</Link>
 					<div className="info-user">
-						<p>Author: {author.username}</p>
+						<p>Author: {author?.username}</p>
 						<time>{moment(createdAt).format('LLL')}</time>
 					</div>
 					<div className="summary">

@@ -15,7 +15,7 @@ export default function CurrentPost() {
 	const { id } = useParams();
 	// console.log(postInfo)
 	useEffect(() => {
-		fetch(`https://server-fv03.onrender.com/post/${id}`).then(response => {
+		fetch(`http://localhost:5000/post/${id}`).then(response => {
 			response.json().then(info => {
 				setPostInfo(info);
 			})
@@ -33,15 +33,15 @@ export default function CurrentPost() {
 						{moment(postInfo.createdAt).format('LLL')}
 					</time>
 					<p>
-						by {postInfo.author.username}
+						by {postInfo.author?.username}
 					</p>
 				</div>
 				<div className="image-post">
-					<img src={`https://server-fv03.onrender.com/${postInfo.cover}`} alt="img" />
+					<img src={`http://localhost:5000/${postInfo.cover}`} alt="img" />
 				</div>
 				<div className="summary-content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
 			</div>
-			{userInfo.id === postInfo.author._id && (
+			{userInfo.id === postInfo.author?._id && (
 				<div className="edit-btn">
 					<Link to={`/blog/edit/${postInfo._id}`}>
 						<h1>

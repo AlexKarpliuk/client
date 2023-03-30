@@ -39,7 +39,7 @@ export default function CreatePost() {
 			data.set('file', files?.[0]);
 		}
 
-		const response = await fetch('https://server-fv03.onrender.com/blog/post', {
+		const response = await fetch('http://localhost:5000/blog/post', {
 			method: 'POST',
 			body: data,
 			credentials: 'include',

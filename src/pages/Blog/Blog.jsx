@@ -13,9 +13,8 @@ function Blog() {
 	const { userInfo, setUserInfo } = useContext(UserContext);
 	const [posts, setPosts] = useState()
 
-
 	useEffect(() => {
-		fetch('https://server-fv03.onrender.com/blog/profile', {
+		fetch('http://localhost:5000/blog/profile', {
 			credentials: 'include'
 		}).then(response => {
 			if (!response.ok) {
@@ -28,23 +27,23 @@ function Blog() {
 			console.error(error)
 		});
 
-		fetch('https://server-fv03.onrender.com/blog/post').then(response => {
+		fetch('http://localhost:5000/blog/post').then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			 }
 			response.json().then(posts => {
 				setPosts(posts)
+					
 			})
 		}).catch(error =>{
 			console.error(error)
 			alert('ERROR "Database is offline"')
 		});
-
 	}, [setUserInfo]);
 
 
 	function logout() {
-		fetch('https://server-fv03.onrender.com/blog/logout', {
+		fetch('http://localhost:5000/blog/logout', {
 			credentials: 'include',
 			method: 'POST'
 		});
