@@ -57,7 +57,7 @@ export default function EditPost() {
 		if (files?.[0]) {
 			data.set('file', files?.[0]);
 		}
-		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/post', {
+		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/update/'+id, {
 			method: 'PUT',
 			body: data,
 			credentials: 'include',
@@ -71,7 +71,7 @@ export default function EditPost() {
 		e.preventDefault();
 		const data = new FormData();
 		data.set('id', id);
-		const response = await fetch(`${process.env.REACT_APP_BASE_URL}/blog/edit/${id}`, {
+		const response = await fetch(`${process.env.REACT_APP_BASE_URL}/blog/delete/${id}`, {
 			method: 'DELETE',
 			body: data,
 			credentials: 'include',

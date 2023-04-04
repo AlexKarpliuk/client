@@ -13,13 +13,12 @@ import { UserContext } from "../userContext/UserContext";
 export default function Posts({ _id, title, content, cover, summary, createdAt, author }) {
 
 	const { userInfo } = useContext(UserContext);
-
 	return (
 		<div className="post-wrapper">
 			<div className="post" >
 				<div className="image">
 					<Link to={userInfo ? `post/${_id}` : 'login/'} >
-						<img src={process.env.REACT_APP_BASE_URL +'/'+ cover} alt="img" />
+						<img src={process.env.REACT_APP_BASE_URL +'/post/'+ cover+'/cover'} alt="img" />
 					</Link>
 				</div>
 				<div className="info">

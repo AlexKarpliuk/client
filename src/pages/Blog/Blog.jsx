@@ -12,6 +12,7 @@ import Posts from './components/post/Posts';
 function Blog() {
 	const { userInfo, setUserInfo } = useContext(UserContext);
 	const [posts, setPosts] = useState()
+	// console.log(posts)
 
 	useEffect(() => {
 		fetch(process.env.REACT_APP_BASE_URL+'/blog/profile', {
