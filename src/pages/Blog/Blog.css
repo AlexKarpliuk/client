@@ -1,6 +1,6 @@
 .wrapper {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	/* overflow: auto; */
 	background-color: var(--page-bg);
 	transition: 0.3s ease-in-out;
@@ -22,8 +22,9 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--page-bg);
-	margin-bottom: 4rem;
+	/* margin-bottom: 2rem; */
 	padding: 30px;
+	transition: 0.3s ease-in-out;
 }
 
 .nav-home h1 {

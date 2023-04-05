@@ -47,8 +47,6 @@ export default function CreatePost() {
 		});
 		if (response.ok) {
 			setRedirect(true);
-		} else if (response.status === 304) {
-			alert('No image provided')
 		}
 	};
 

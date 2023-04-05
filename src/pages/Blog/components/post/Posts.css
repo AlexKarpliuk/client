@@ -6,6 +6,7 @@
 	min-width: 1250px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	min-height: 40vh;
 	width: 60vw;
 	padding:0 20px;
