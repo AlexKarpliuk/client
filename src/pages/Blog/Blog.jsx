@@ -2,6 +2,7 @@ import '../Blog/Blog.css'
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from './components/userContext/UserContext';
+import { createBrowserHistory } from 'history';
 import Posts from './components/post/Posts';
 
 
@@ -15,28 +16,28 @@ function Blog() {
 	// console.log(posts)
 
 	useEffect(() => {
-		fetch(process.env.REACT_APP_BASE_URL+'/blog/profile', {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/profile', {
 			credentials: 'include'
 		}).then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
-			 }
+			}
 			response.json().then(userInfo => {
 				setUserInfo(userInfo);
 			})
-		}).catch(error =>{
+		}).catch(error => {
 			console.error(error)
 		});
 
-		fetch(process.env.REACT_APP_BASE_URL+'/blog/post').then(response => {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/post').then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
-			 }
+			}
 			response.json().then(posts => {
 				setPosts(posts)
-					
+
 			})
-		}).catch(error =>{
+		}).catch(error => {
 			console.error(error)
 			alert('ERROR "Database is offline"')
 		});
@@ -44,24 +45,30 @@ function Blog() {
 
 
 	function logout() {
-		fetch(process.env.REACT_APP_BASE_URL+'/blog/logout', {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/logout', {
 			credentials: 'include',
 			method: 'POST'
 		});
 		setUserInfo();
+	}
+	function reloadPage() {
+		const history = createBrowserHistory();
+		const currentPageUrl = window.location.href = '/blog';
+		history.replaceState(null, null, currentPageUrl);
 	}
 
 
 
 	const username = userInfo?.username;
 	const location = useLocation();
-	
+
 	return (
 		<div className="wrapper">
 			<nav className='blog-nav-wrapper'>
 				<div className="blog-nav">
 					<div className="nav-home">
-						<Link to='/blog'><h1>{username ? `Welcome, ${username}` : 'Blog'}</h1></Link>
+						<h1 onClick={reloadPage}>{username ? `Welcome, ${username}` : 'Blog'}</h1>
+						{/* <Link to='/blog' onClick={reloadPage}><h1>{username ? `Welcome, ${username}` : 'Blog'}</h1></Link> */}
 					</div>
 					<div className="nav-links">
 						{username && (

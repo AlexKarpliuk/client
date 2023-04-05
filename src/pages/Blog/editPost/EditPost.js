@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
-import { useParams} from 'react-router';
+import { useParams, Navigate} from 'react-router';
 import '../editPost/editPost.css'
 import 'react-quill/dist/quill.snow.css'
 import { Link } from 'react-router-dom';
@@ -83,10 +83,11 @@ export default function EditPost() {
 
 
 	if (redirectHome) {
-		window.location.href = '/blog';
+		return <Navigate to={'/blog'} />
 	};
 	if (redirect) {
-		window.location.href = '/blog/post/' + id
+		return <Navigate to={`/blog/post/${id}`} />
+		// window.location.href = '/blog/post/' + id
 	};
 
 

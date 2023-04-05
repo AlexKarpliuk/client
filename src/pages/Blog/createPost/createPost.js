@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ReactQuill from 'react-quill';
-// import { Navigate } from 'react-router';
+import { Navigate } from 'react-router';
 import 'react-quill/dist/quill.snow.css'
 
 
@@ -51,7 +51,7 @@ export default function CreatePost() {
 	};
 
 	if (redirect) {
-		window.location.href = '/blog';
+		return <Navigate to={'/blog'} />
 	}
 
 	return (
