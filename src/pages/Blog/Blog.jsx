@@ -2,7 +2,7 @@ import '../Blog/Blog.css'
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from './components/userContext/UserContext';
-import { createBrowserHistory } from 'history';
+// import { createBrowserHistory } from 'history';
 import Posts from './components/post/Posts';
 
 
@@ -51,11 +51,11 @@ function Blog() {
 		});
 		setUserInfo();
 	}
-	function reloadPage() {
-		const history = createBrowserHistory();
-		const currentPageUrl = window.location.href = '/blog';
-		history.replaceState(null, null, currentPageUrl);
-	}
+	// function reloadPage() {
+	// 	const history = createBrowserHistory();
+	// 	const currentPageUrl = window.location.href = '/blog';
+	// 	history.replaceState(null, null, currentPageUrl);
+	// }
 
 
 
@@ -67,8 +67,8 @@ function Blog() {
 			<nav className='blog-nav-wrapper'>
 				<div className="blog-nav">
 					<div className="nav-home">
-						<h1 onClick={reloadPage}>{username ? `Welcome, ${username}` : 'Blog'}</h1>
-						{/* <Link to='/blog' onClick={reloadPage}><h1>{username ? `Welcome, ${username}` : 'Blog'}</h1></Link> */}
+						{/* <h1 onClick={reloadPage}>{username ? `Welcome, ${username}` : 'Blog'}</h1> */}
+						<Link to='/blog'><h1>{username ? `Welcome, ${username}` : 'Blog'}</h1></Link>
 					</div>
 					<div className="nav-links">
 						{username && (

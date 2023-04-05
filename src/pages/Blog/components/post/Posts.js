@@ -18,7 +18,7 @@ export default function Posts({ _id, title, content, cover, summary, createdAt, 
 			<div className="post" >
 				<div className="image">
 					<Link to={userInfo ? `post/${_id}` : 'login/'} >
-						<img src={process.env.REACT_APP_BASE_URL +'/post/'+ cover+'/cover'} alt="img" />
+						<img src={process.env.REACT_APP_BASE_URL+'/post/'+cover+'/cover'} alt="img" />
 					</Link>
 				</div>
 				<div className="info">
