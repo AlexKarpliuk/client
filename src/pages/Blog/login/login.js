@@ -21,9 +21,10 @@ export default function LoginForm() {
 		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/login', {
 			method: 'POST',
 			body: JSON.stringify({ username, password }),
-			headers: { 'Content-Type': 'application/json' },
-			methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-			allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+			headers: { 
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*' 
+			},
 			credentials: 'include',
 		});
 		if (response.ok) {
