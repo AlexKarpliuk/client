@@ -17,7 +17,10 @@ function Blog() {
 
 	useEffect(() => {
 		fetch(process.env.REACT_APP_BASE_URL + '/blog/profile', {
-			credentials: 'include'
+			headers: { 'Content-Type': 'application/json' },
+			methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+			allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+			credentials: 'include',
 		}).then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
@@ -29,7 +32,12 @@ function Blog() {
 			console.error(error)
 		});
 
-		fetch(process.env.REACT_APP_BASE_URL + '/blog/post').then(response => {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/post', {
+			headers: { 'Content-Type': 'application/json' },
+			methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+			allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+			credentials: 'include',
+		}).then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			}
