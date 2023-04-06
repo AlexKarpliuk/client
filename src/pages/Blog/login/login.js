@@ -22,6 +22,8 @@ export default function LoginForm() {
 			method: 'POST',
 			body: JSON.stringify({ username, password }),
 			headers: { 'Content-Type': 'application/json' },
+			methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+			allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
 			credentials: 'include',
 		});
 		if (response.ok) {
