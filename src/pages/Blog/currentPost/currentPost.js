@@ -37,7 +37,9 @@ export default function CurrentPost() {
 					</p>
 				</div>
 				<div className="image-post">
-					<img src={`${process.env.REACT_APP_BASE_URL}/post/${postInfo.cover}/cover`} alt="img" />
+					{postInfo.cover &&(
+						<img src={`${process.env.REACT_APP_BASE_URL}/post/${postInfo.cover}/cover`} alt="img" />
+					)}
 				</div>
 				<div className="summary-content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
 			</div>

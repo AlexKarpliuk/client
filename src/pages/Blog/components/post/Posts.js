@@ -18,7 +18,12 @@ export default function Posts({ _id, title, content, cover, summary, createdAt, 
 			<div className="post" >
 				<div className="image">
 					<Link to={userInfo ? `post/${_id}` : 'login/'} >
-						<img src={process.env.REACT_APP_BASE_URL+'/post/'+cover+'/cover'} alt="img" />
+						{cover && (
+							<img src={process.env.REACT_APP_BASE_URL + '/post/' + cover + '/cover'} alt="img" />
+						)}
+						{!cover && (
+							<h1>no image provided</h1>
+						)}
 					</Link>
 				</div>
 				<div className="info">
