@@ -19,7 +19,7 @@ function Blog() {
 		fetch(process.env.REACT_APP_BASE_URL + '/blog/profile', {
 			headers: { 
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*'
+				'Access-Control-Allow-Origin': process.env.CURRENT_HEADER_LINK
 			 },
 			credentials: 'include',
 		}).then(response => {
@@ -33,7 +33,11 @@ function Blog() {
 			console.error(error)
 		});
 
-		fetch(process.env.REACT_APP_BASE_URL + '/blog/post').then(response => {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/post',{
+			headers: { 
+				'Access-Control-Allow-Origin': process.env.CURRENT_HEADER_LINK
+			 },
+		}).then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			}
