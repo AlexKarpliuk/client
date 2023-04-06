@@ -43,6 +43,9 @@ export default function CreatePost() {
 		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/post', {
 			method: 'POST',
 			body: data,
+			headers: { 'Content-Type': 'application/json' },
+			methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+			allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
 			credentials: 'include',
 		});
 		if (response.ok) {
