@@ -26,9 +26,6 @@ function App() {
 		setTheme(newTheme)
 	}
 
-
-
-
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<Route path='/' element={<Nav switchTheme={switchTheme} theme={theme} />}>
