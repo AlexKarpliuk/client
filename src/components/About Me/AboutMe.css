@@ -61,9 +61,11 @@ aside {
 .aside-logo img {
 	width: 350px;
 	margin-bottom: 3rem;
-	border-radius: 1.2rem;
+	border-radius: 1.5rem;
 	box-shadow: 2rem 2rem 2.3rem rgb(0 0 0 / 0.2);
+	filter: opacity(0.65);
 }
+
 
 .aside-arrow {
 	margin-left: -18rem;
@@ -293,18 +295,20 @@ aside {
 
 	aside,
 	.about-dis {
-		padding-right: 0rem;
+		user-select: none;
+		padding-right: 3rem;
 	}
 
 	.aside-logo {
-		margin-bottom: 4rem;
+		margin-left: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	.aside-logo img {
-		width: 600px;
-		height: 70px;
+		width: 650px;
+		height: 80px;
 		object-fit: cover;
-		object-position: 0% 33%;
+		object-position: 0% 38%;
 	}
 
 	.aside-arrow {

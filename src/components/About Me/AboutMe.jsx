@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import CV from '../../assets/About/CV_AlexKarpliuk.pdf';
 import '../About Me/AboutMe.css'
 import { skills } from '../../data/dataSkills'
-import aboutLogo from '../../assets/About/aboutLogo.svg'
+// import aboutLogo from '../../assets/About/aboutLogo.svg'
+import Logo from '../../assets/About/logo.jpg'
 import QR from '../../assets/About/QR.svg'
 import QRarrow from '../../assets/About/QRerrow.svg'
 import { FcNext } from "react-icons/fc";
@@ -32,7 +33,8 @@ function About() {
 				<div className="about-content">
 					<aside >
 						<div className="aside-logo">
-							<img src={aboutLogo} alt="logo" />
+							<img src={Logo} alt="logo" />
+							{/* <img src={aboutLogo} alt="logo" /> */}
 						</div>
 						<div className="aside-arrow">
 							<img src={QRarrow} alt="qrLogo" />

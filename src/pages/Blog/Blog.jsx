@@ -14,14 +14,11 @@ function Blog() {
 		<div className="wrapper">
 			<Header />
 			{location.pathname === '/blog' && (
-				<>
 					<Post />
-				</>
 			)}
 			<Outlet />
 		</div>
-
 	);
-}
+};
 
 export default Blog;
