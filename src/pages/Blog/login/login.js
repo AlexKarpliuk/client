@@ -22,8 +22,7 @@ export default function LoginForm() {
 			method: 'POST',
 			body: JSON.stringify({ username, password }),
 			headers: { 
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*' 
+				'Content-Type': 'application/json' 
 			},
 			credentials: 'include',
 		});

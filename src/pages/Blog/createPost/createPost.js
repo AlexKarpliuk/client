@@ -43,10 +43,7 @@ export default function CreatePost() {
 		const response = await fetch(process.env.REACT_APP_BASE_URL+'/blog/post', {
 			method: 'POST',
 			body: data,
-			headers: { 
-				'Access-Control-Allow-Origin': '*'
-		  },
-			credentials: 'include',
+			credentials: 'include'
 		});
 		if (response.ok) {
 			setRedirect(true);

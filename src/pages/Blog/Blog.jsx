@@ -11,20 +11,19 @@ import Posts from './components/post/Posts';
 
 
 function Blog() {
-	const { userInfo, setUserInfo } = useContext(UserContext);
 	const [posts, setPosts] = useState()
-	// console.log(posts)
-
+	const { userInfo, setUserInfo } = useContext(UserContext);
+	// console.log(setUserInfo)
+	
 	useEffect(() => {
 		fetch(process.env.REACT_APP_BASE_URL + '/blog/profile', {
-			headers: { 
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': process.env.CURRENT_HEADER_LINK
-			 },
+			headers: {
+				'Content-Type': 'application/json'
+			},
 			credentials: 'include',
 		}).then(response => {
 			if (!response.ok) {
-				throw new Error('Failed to fetch user information');
+				return;
 			}
 			response.json().then(userInfo => {
 				setUserInfo(userInfo);
@@ -32,12 +31,10 @@ function Blog() {
 		}).catch(error => {
 			console.error(error)
 		});
+	}, [setUserInfo]);
 
-		fetch(process.env.REACT_APP_BASE_URL + '/blog/post',{
-			headers: { 
-				'Access-Control-Allow-Origin': process.env.CURRENT_HEADER_LINK
-			 },
-		}).then(response => {
+	useEffect(() => {
+		fetch(process.env.REACT_APP_BASE_URL + '/blog/post').then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to fetch user information');
 			}
@@ -49,7 +46,7 @@ function Blog() {
 			console.error(error)
 			alert('ERROR "Database is offline"')
 		});
-	}, [setUserInfo]);
+	}, []);
 
 
 	function logout() {
@@ -57,7 +54,7 @@ function Blog() {
 			credentials: 'include',
 			method: 'POST'
 		});
-		setUserInfo();
+		setUserInfo(null);
 	}
 	// function reloadPage() {
 	// 	const history = createBrowserHistory();
@@ -69,7 +66,6 @@ function Blog() {
 
 	const username = userInfo?.username;
 	const location = useLocation();
-
 	return (
 		<div className="wrapper">
 			<nav className='blog-nav-wrapper'>
