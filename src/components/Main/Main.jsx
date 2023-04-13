@@ -18,7 +18,7 @@ function Main(props) {
 					<div>
 						<h1>Junior/<span>Trainee</span> Frontend developer</h1>
 					</div>
-					<p>Hello! Welcome to my page. My name is Alex and I’m a junior/Trainee FrontEnd developer and I’m open for job offers and collaboration. </p>
+					<p>Hello! Welcome to my page. My name is Alex and I’m a Junior/Trainee FrontEnd developer and I’m open for job offers and collaboration. </p>
 					<div className ='contacts' >
 						<a href='#contacts' onClick={handleClick}>Contact</a>
 					</div>

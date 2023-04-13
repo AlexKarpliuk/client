@@ -391,6 +391,7 @@ aside {
 	}
 
 	.about-content {
+		display: block;
 		margin-top: 1rem;
 		flex-direction: row;
 	}

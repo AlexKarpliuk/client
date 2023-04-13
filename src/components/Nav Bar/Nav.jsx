@@ -1,12 +1,12 @@
 import './Nav.css';
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 // import US from '../images/US.svg'
 import logo from '../../assets/logo.jpg'
 import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdNightlight } from "react-icons/md";
 import { useState } from 'react';
-import { links, handleClick } from '../../data/dataLinks'
+import { links, handleClick} from '../../data/dataLinks'
 
 
 
@@ -18,6 +18,7 @@ function Nav(props) {
 	const [open, setOpen] = useState(false);
 
 
+	const location = useLocation();
 	return (
 		<>
 			<nav className="nav-container">
@@ -36,6 +37,7 @@ function Nav(props) {
 							<div className="modes-btn" onClick={toggle}>
 								{currentTheme === 'dark' ? <MdNightlight /> : <MdLightMode />}
 							</div>
+							{location.pathname === '/' &&(
 							<div className='content-links'>
 								{links.map((link) => {
 									return (
@@ -43,6 +45,7 @@ function Nav(props) {
 									)
 								})}
 							</div>
+							)}
 						</ul>
 					</div>
 				</div >

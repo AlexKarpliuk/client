@@ -1,6 +1,6 @@
 import './App.css';
 import Nav from './components/Nav Bar/Nav'
-import Home from './components/Home';
+import Layout from './components/Layout';
 import Memory from './pages/Memory/Memory';
 import Weather from './pages/Weather/Weather';
 import Blog from './pages/Blog/Blog';
@@ -25,11 +25,12 @@ function App() {
 		const newTheme = theme === 'dark' ? 'light' : 'dark'
 		setTheme(newTheme)
 	}
+	
 
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<Route path='/' element={<Nav switchTheme={switchTheme} theme={theme} />}>
-				<Route index element={<Home themes={theme} />} />
+				<Route index element={<Layout themes={theme} />} />
 				<Route path='memory' element={<Memory />} />
 				<Route path='weather' element={<Weather />} />
 				<Route path='blog' element={<Blog />}>

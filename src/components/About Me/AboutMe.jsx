@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import CV from '../../assets/About/CV_AlexKarpliuk.pdf';
 import '../About Me/AboutMe.css'
 import { skills } from '../../data/dataSkills'
 // import aboutLogo from '../../assets/About/aboutLogo.svg'
 import Logo from '../../assets/About/logo.jpg'
-import QR from '../../assets/About/QR.svg'
+import CV from '../../assets/About/CV_AlexKarpliuk.pdf';
+import QR from '../../assets/About/ResumeQR.svg'
 import QRarrow from '../../assets/About/QRerrow.svg'
 import { FcNext } from "react-icons/fc";
 import { FcExpand } from "react-icons/fc";
@@ -43,10 +43,10 @@ function About() {
 							<img src={QR} alt="qrLogo" />
 						</div>
 						<div className="aside-downloadCV">
-							<a href={CV} download='CV'>
+							<a href={CV} download='CV Alex Karpliuk'>
 								<div className="cv-arrow">{<FcDownload size={32} />}</div>
+								<h1 className='dis-title cv'>Download CV</h1>
 							</a>
-							<h1 className='dis-title cv'>Download CV</h1>
 						</div>
 					</aside>
 					<div className="about-dis">
