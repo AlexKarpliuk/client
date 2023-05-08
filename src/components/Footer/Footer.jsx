@@ -74,7 +74,7 @@ const onSubmit = (e) => {
 						</div>
 						<div className="contacts-items">
 							<GiPositionMarker size={32} />
-							<h3>Zhytomyr, Ukraine</h3>
+							<h3>Kiev, Ukraine</h3>
 						</div>
 					</div>
 					<form onSubmit={onSubmit}>

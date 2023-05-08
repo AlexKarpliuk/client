@@ -63,7 +63,7 @@ aside {
 	margin-bottom: 3rem;
 	border-radius: 1.5rem;
 	box-shadow: 2rem 2rem 2.3rem rgb(0 0 0 / 0.2);
-	filter: opacity(0.65);
+	filter:brightness(110%)
 }
 
 
