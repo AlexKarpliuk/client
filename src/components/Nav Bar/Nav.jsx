@@ -2,6 +2,7 @@ import './Nav.css';
 import { Link, Outlet, useLocation } from 'react-router-dom'
 // import US from '../images/US.svg'
 import logo from '../../assets/logo.jpg'
+import logo2 from '../../assets/logo.png'
 import { MdMenu } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { MdNightlight } from "react-icons/md";
@@ -25,7 +26,7 @@ function Nav(props) {
 				<div className="nav-content">
 					<Link to='/'>
 						<div className="content-logo-name" >
-							<img src={logo} alt="logo" />
+							<img src={logo2} alt="logo" />
 							<h3>Alex Karpliuk</h3>
 						</div>
 					</Link>

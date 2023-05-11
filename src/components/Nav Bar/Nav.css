@@ -52,6 +52,7 @@ justify-content: center;
 .content-logo-name img {
 	width: 60px;
 	border-radius: 2rem;
+	filter:brightness(109%)
 }
 
 .content-logo-name h3 {

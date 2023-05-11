@@ -59,16 +59,19 @@ aside {
 }
 
 .aside-logo img {
-	width: 350px;
-	margin-bottom: 3rem;
-	border-radius: 1.5rem;
+	object-fit: cover;
+	object-position: -20px 1px;
+	width: 280px;
+	height: 280px;
+	margin-bottom: 1.5rem;
+	border-radius: 10rem;
 	box-shadow: 2rem 2rem 2.3rem rgb(0 0 0 / 0.2);
 	filter:brightness(110%)
 }
 
 
 .aside-arrow {
-	margin-left: -18rem;
+	margin-left: -15rem;
 }
 
 .aside-arrow img {
